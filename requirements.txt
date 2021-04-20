@@ -12,4 +12,7 @@ uvicorn==0.11.7
 uvloop==0.12.2
 websockets==7.0
 nltk
-
+botnoi
+oauth2client
+keras
+tensorflow
