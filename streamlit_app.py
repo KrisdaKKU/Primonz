@@ -4,11 +4,7 @@ from pyngrok import ngrok
 
 public_url = ngrok.connect(port='8501')
 
-import streamlit as st
-st.title('Primonz')
-p_image_url = st.text_input("ลิ้งค์ภาพ: ")
-aw = imgurl(p_image_url)
-st.text(str(aw))
+
 
 def imgurl(p_image_url: str):
   #file#Image.open(image.file)
@@ -19,3 +15,9 @@ def imgurl(p_image_url: str):
   char = predict.answer(name)
   return {"name":str(char)}
 
+import streamlit as st
+st.title('Primonz')
+p_image_url = st.text_input("ลิ้งค์ภาพ: ")
+if st.button('Excuted'):
+  aw = imgurl(p_image_url)
+  st.text(str(aw))
