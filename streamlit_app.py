@@ -17,4 +17,5 @@ st.title('Primonz')
 p_image_url = st.text_input("ลิ้งค์ภาพ: ")
 #if st.button('Excuted'):
 aw = imgurl(p_image_url)
+st.image("file2.png")
 st.text(str(aw))
