@@ -2,8 +2,9 @@ from botnoi import scrape as sc
 from botnoi import cv
 import os
 import glob
-
-
+from sklearn.model_selection import train_test_split
+import numpy as np
+from sklearn.svm import LinearSVC
 import glob
 import pandas as pd
 import pickle
@@ -31,9 +32,7 @@ imgfolder = glob.glob('images/*')
 for cls in imgfolder:
   imgList = glob.glob(cls+'/*')
 
-from sklearn.model_selection import train_test_split
-import numpy as np
-from sklearn.svm import LinearSVC
+
 def trainmodel(dataset,modfile=''):
   trainfeat, testfeat, trainlabel, testlabel = train_test_split(dataset['feature'], dataset['label'], test_size=0.33, random_state=42)
   clf = LinearSVC()
