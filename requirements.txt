@@ -89,6 +89,6 @@ wheel==0.36.2
 wrapt==1.12.1
 pyngrok
 
-
+tensorflow
 streamlit==0.77.0
 
