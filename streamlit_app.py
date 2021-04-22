@@ -10,7 +10,7 @@ def imgurl(p_image_url: str):
       f.write(r.content)
   name = "file2.png"
   char = predict.answer(name)
-  return {"name":str(char)}
+  return {"CHname":str(char)}
 
 import streamlit as st
 st.title('Primonz')
