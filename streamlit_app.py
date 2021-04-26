@@ -1,8 +1,8 @@
 import requests
 import predict
 import streamlit as st
-
-p_image_url = st.experimental_get_query_params()
+p_image_url=""
+st.experimental_get_query_params(p_image_url)
 def imgurl(p_image_url: str):
   #file#Image.open(image.file)
   r = requests.get(p_image_url, allow_redirects=True)
