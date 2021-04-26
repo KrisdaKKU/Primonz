@@ -22,8 +22,5 @@ st.text(str(aw))
 radio = ["Job","Po","Aon","MuayCoke"]
 query = st.experimental_get_query_params()
 defaul = int(query["nameChar"][0]) if "nameChar" in query else 0
-nameChar = st.radio(
-  "what",radio,index = defaul
-)
-if nameChar:
-  st.experimental_set_query_params(nameChar=radio.index(nameChar))
+nameChar = str(aw)
+st.experimental_set_query_params(nameChar=nameChar)
