@@ -19,3 +19,9 @@ p_image_url = st.text_input("ลิ้งค์ภาพ: ")
 aw = imgurl(p_image_url)
 st.image("file2.png")
 st.text(str(aw))
+
+query = st.experimental_get_query_params()
+defaul = int(query["nameChar"][0]) if "nameChar" in query else 0
+nameChar = str(aw)
+if nameChar:
+  st.experimental_set_query_params(nameChar)
