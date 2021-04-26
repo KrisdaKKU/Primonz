@@ -22,4 +22,4 @@ st.text(str(aw))
 
 query = st.experimental_get_query_params()
 nameChar = str(aw)
-st.experimental_set_query_params(nameChar)
+st.experimental_set_query_params(nameChar=nameChar)
