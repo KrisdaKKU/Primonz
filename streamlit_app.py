@@ -1,6 +1,6 @@
 import requests
 import predict
-
+import streamlit as st
 
 st.experimental_get_query_params(p_image_url)
 def imgurl(p_image_url: str):
@@ -12,7 +12,7 @@ def imgurl(p_image_url: str):
   char = predict.answer(name)
   return {'nameCH':str(char)}
 
-import streamlit as st
+
 st.title('Primonz')
 p_image_url = st.text_input("ลิ้งค์ภาพ: ")
 #if st.button('Excuted'):
